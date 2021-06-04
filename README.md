@@ -1,4 +1,4 @@
-# Projeto sobre indecações de filmes com PHP + Fire Base
+# Projeto sobre indicações de filmes com PHP + Fire Base
 
 Login: samuelfernandes
 
