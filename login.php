@@ -26,7 +26,7 @@ $login = $database->getReference('login')->getSnapshot();
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style-login.css">
 
-    <title>Document</title>
+    <title>Login</title>
 
 </head>
 
@@ -47,7 +47,7 @@ $login = $database->getReference('login')->getSnapshot();
                 <input type="password" id="password" name="password" placeholder="senha">
 
 
-                <input type="submit" class="" name="login_firebase">
+                <input type="submit" name="login_firebase">
 
 
                 <?php

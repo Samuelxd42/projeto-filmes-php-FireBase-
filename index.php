@@ -33,8 +33,15 @@ $filmes = $database->getReference('filmes')->getSnapshot();
 </head>
 
 <body>
+    
+    <div class="container-nav">
+        <div class="row">
+             <h2 class="col-8"> <strong class="txt-margin"> Renomenda Filmes</strong> </h2>
 
-    <h2> <strong>Indicações de Filmes Renomados</strong> </h2>
+             <a class="col-4" href="login.php"><img src="img/log-out.svg" alt="" class="img-logout"></a>
+        </div>
+      
+    </div>
 
     <?php foreach ($filmes->getValue() as $filme) : ?>
         <div class="container">
