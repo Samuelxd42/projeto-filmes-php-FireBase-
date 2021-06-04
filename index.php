@@ -51,8 +51,6 @@ $filmes = $database->getReference('filmes')->getSnapshot();
         </div>
     <?php endforeach; ?>
 
-
-
 </body>
 
 </html>
