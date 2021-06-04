@@ -47,3 +47,15 @@ body {
     font-variant: all-petite-caps;
 }
 
+@media (max-width: 650px) {
+
+    .container {
+        width: auto;
+    }
+
+    .des-img {
+        display: none;
+    }
+
+}
+

@@ -33,23 +33,23 @@ $filmes = $database->getReference('filmes')->getSnapshot();
 </head>
 
 <body>
-    
+
     <div class="container-nav">
         <div class="row">
-             <h2 class="col-8"> <strong class="txt-margin"> Renomenda Filmes</strong> </h2>
+            <h2 class="col-8"> <strong class="txt-margin"> Recomenda Filmes</strong> </h2>
 
-             <a class="col-4" href="login.php"><img src="img/log-out.svg" alt="" class="img-logout"></a>
+            <a class="col-4" href="login.php"><img src="img/log-out.svg" alt="" class="img-logout"></a>
         </div>
-      
+
     </div>
 
     <?php foreach ($filmes->getValue() as $filme) : ?>
         <div class="container">
             <div class="row">
 
-                <img class="col-4 des-img" src="<?php echo $filme['imagemFilme'] ?>" height="380" width="80">
+                <img class="col-3 des-img" src="<?php echo $filme['imagemFilme'] ?>" height="350">
 
-                <div class="col-8" class="des-filme">
+                <div class="col-9" class="des-filme">
                     <h3> <strong><?php echo $filme['nomeFilme'] ?></strong> </h3>
                     <h4> <?php echo $filme['descricaoFilme'] ?></h4>
                 </div>
