@@ -1,5 +1,10 @@
 <?php
 
+if (!$_COOKIE["loginToken"]) {
+    header("Location: login.php");
+    exit;
+}
+
 require __DIR__ . '/vendor/autoload.php';
 
 use Kreait\Firebase\Factory;
@@ -22,31 +27,31 @@ $filmes = $database->getReference('filmes')->getSnapshot();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-index.css">
 
     <title>Site Web</title>
 </head>
 
 <body>
 
-    <?php foreach ($filmes->getValue() as $filme) : ?>
+    <h2> <strong>Indicações de Filmes Renomados</strong> </h2>
 
-        <section id="filmes-id">
+    <?php foreach ($filmes->getValue() as $filme) : ?>
+        <div class="container">
             <div class="row">
 
-                <div class="col-md-4 imagem-filme">
-                    <img src="<?php echo $filme['imagemFilme'] ?>" height="320" width="200">
-                </div>
+                <img class="col-4 des-img" src="<?php echo $filme['imagemFilme'] ?>" height="380" width="80">
 
-                <div class="col-md-8 descricoes-filme">
-                    <h3 class="nome-filme"><?php echo $filme['nomeFilme'] ?></h3>
-                    <h4 class="des-filme"> <?php echo $filme['descricaoFilme'] ?></h4>
+                <div class="col-8" class="des-filme">
+                    <h3> <strong><?php echo $filme['nomeFilme'] ?></strong> </h3>
+                    <h4> <?php echo $filme['descricaoFilme'] ?></h4>
                 </div>
-
             </div>
-        </section>
 
+        </div>
     <?php endforeach; ?>
+
+
 
 </body>
 
