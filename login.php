@@ -1,7 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+setcookie("loginToken", $user); unset($_COOKIE['loginToken']);
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -66,10 +65,12 @@ $login = $database->getReference('login')->getSnapshot();
                             header("Location: index.php");
                             exit;
                         } else
+                            setcookie("loginToken", $user); unset($_COOKIE['loginToken']);
                             echo "Senha inválida";   
                     } else {
 
                         echo "Usuário inválido";
+                        
                     }
                 }
 

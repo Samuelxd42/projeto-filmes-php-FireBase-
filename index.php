@@ -3,7 +3,9 @@
 if (!$_COOKIE["loginToken"]) {
     header("Location: login.php");
     exit;
-}
+    
+} 
+
 
 require __DIR__ . '/vendor/autoload.php';
 
