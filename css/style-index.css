@@ -47,6 +47,18 @@ body {
     font-variant: all-petite-caps;
 }
 
+.navbar-collapse {
+    margin-left: 180px;
+}
+
+.navbar-brand {
+    margin-left: 140px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
 @media (max-width: 650px) {
 
     .container {
@@ -55,7 +67,6 @@ body {
 
     .des-img {
         display: none;
-        height: 20%;
     }
 
 }
