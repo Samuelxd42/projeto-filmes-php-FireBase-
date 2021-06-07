@@ -42,10 +42,10 @@ $filmes = $database->getReference('filmes')->getSnapshot();
                 <span id="hamburger"></span>
             </button>
             <ul id="menu" role="menu">
-                <li><a href="/">Sobre</a></li>
-                <li><a href="/">Produtos</a></li>
-                <li><a href="/">Portfólio</a></li>
-                <li><a href="/">Contato</a></li>
+                <li><a href="/">Drama</a></li>
+                <li><a href="/">Comédia</a></li>
+                <li><a href="/">Ação</a></li>
+                <li><a href="/">Terror</a></li>
                 <a href="login.php"><img src="img/logout.svg" alt="" class="img-logout"></a>
             </ul>
         </nav>
@@ -55,12 +55,13 @@ $filmes = $database->getReference('filmes')->getSnapshot();
         <div class="container">
             <div class="row">
 
-                <img class="col-3 des-img" src="<?php echo $filme['imagemFilme'] ?>" height="350">
+                <img class="col col-lg-3 des-img" class="img-fluid" src="<?php echo $filme['imagemFilme'] ?>" height="350">
 
-                <div class="col-9" class="des-filme">
+                <div class="col col-lg-9" class="des-filme">
                     <h3> <strong><?php echo $filme['nomeFilme'] ?></strong> </h3>
                     <h4> <?php echo $filme['descricaoFilme'] ?></h4>
                 </div>
+
             </div>
 
         </div>
@@ -68,7 +69,7 @@ $filmes = $database->getReference('filmes')->getSnapshot();
 
 </body>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>

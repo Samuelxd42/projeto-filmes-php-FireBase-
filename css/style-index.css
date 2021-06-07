@@ -32,6 +32,7 @@ body {
     display: inline-grid;
     box-shadow: 0px 0px 11px 0px #e8e8e8;
     border-radius: 20px;
+    height: 220;
 }
 
 .container {
@@ -45,24 +46,6 @@ body {
     margin-bottom: 20px;
     font-variant: all-petite-caps;
 }
-
-/* .navbar-collapse {
-    margin-left: 180px;
-}
-
-.navbar-brand {
-    margin-left: 140px;
-}
-
-.navbar {
-    border-radius: 0;
-}
-
-.row {
-    padding: 20px;
-} */
-
-
 
 body, ul {
     margin: 0px;
